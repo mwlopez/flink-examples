@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  io.aeolabs.flink.countwordms.config.FlinkAutoConfiguration

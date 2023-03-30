@@ -1,0 +1,26 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+
+
+flink-properties:
+  job-name: "AeolFlinkStreamingSpringBoot"
+  job-manager-url: "localhost"
+  job-manager-port: 8081
+  remote-env-jar-files:
+    - "target/count-word-ms-0.0.1-SNAPSHOT.jar"
+  max-client-rest-request-size-bytes: 2000000000
+  terminate: true
+  termination-grace-period-ms: 30000
+server:
+  port: 8085
+
+kafka:
+  brokers: localhost:9092
+  user:
+  password:
+  topics: countIn
+  groupid: flink-springboot
+  consumer:
+    concurrency: 1
+
